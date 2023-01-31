@@ -6,7 +6,7 @@
 $ docker compose up -d
 ```
 
-### db set up
+### db client set up
 
 ```
 HOST: 127.0.0.1
