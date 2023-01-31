@@ -1,0 +1,292 @@
+id,en_word,jp_word,category,level
+1,Monday,月曜日,曜日,1
+2,Tuesday,火曜日,曜日,1
+3,Wednesday,水曜日,曜日,1
+4,Thursday,木曜日,曜日,1
+5,Friday,金曜日,曜日,1
+6,Saturday,土曜日,曜日,1
+7,Sunday,日曜日,曜日,1
+8,weekdays,平日,曜日,1
+9,weekend,週末,曜日,1
+11,January,1 月,月,1
+12,February,2 月,月,1
+13,March,3 月,月,1
+14,April,4 月,月,1
+15,May,5 月,月,1
+16,June,6 月,月,1
+17,July,7 月,月,1
+18,August,8 月,月,1
+19,September,9 月,月,1
+20,October,10 月,月,1
+21,November,11 月,月,1
+22,December,12 月,月,1
+24,gardening,ガーデニング,趣味,1
+25,stamp collection,切手収集,趣味,1
+26,orienteering,オリエンテーリング,趣味,5
+27,caving,洞窟探検,趣味,5
+28,spelunking,洞窟探検,趣味,10
+29,scuba diving,スキューバ ダイビング,趣味,5
+30,snorkeling,​​シュノーケリング,趣味,5
+31,skateboarding,スケートボード,趣味,1
+32,bowling,ボウル,趣味,1
+33,archery,アーチェリー,趣味,5
+34,ice skating,アイススケート,趣味,1
+35,darts,ダーツ,趣味,1
+36,golf,ゴルフ,趣味,1
+37,billiards,ビリヤード,趣味,5
+38,photography,写真,趣味,5
+39,painting,絵画,趣味,1
+40,embroidery,刺繍,趣味,10
+41,climbing,登山,趣味,5
+42,chess,チェス,趣味,1
+43,parachute,パラシュート,趣味,5
+44,pottery,陶芸,趣味,5
+45,woodcarving,木彫り,趣味,5
+47,science,科学,科目,1
+48,politics,政治,科目,1
+49,architecture,建築,科目,5
+50,law,法律,科目,1
+51,geography,地理,科目,1
+52,history,歴史,科目,1
+53,biology,生物学,科目,1
+54,archaeology,考古学,科目,5
+55,literature,文学,科目,5
+56,statistics,統計,科目,5
+57,mathematics,数学,科目,1
+58,performing arts,舞台芸術,科目,5
+59,visual arts,視覚芸術,科目,5
+60,logic,論理,科目,1
+61,physics,物理学,科目,5
+62,psychology,心理学,科目,5
+63,anthropology,人類学,科目,5
+64,economics,経済学,科目,1
+65,philosophy,哲学,科目,1
+66,chemistry,化学,科目,1
+67,humanities,人文科学,科目,1
+68,business management,経営管理,科目,1
+69,agriculture,農業,科目,1
+71,catalogue,カタログ,マーケティング,1
+72,interview,インタビュー,マーケティング,1
+73,research method,調査方法,マーケティング,1
+74,entertainment industry,芸能界,マーケティング,5
+75,TV program,テレビ番組,マーケティング,1
+76,strategies,戦略,マーケティング,5
+77,leadership,リーダーシップ,マーケティング,1
+78,management,経営,マーケティング,1
+79,customer,顧客,マーケティング,1
+80,special offer,特典,マーケティング,5
+81,collecting data,情報収集,マーケティング,5
+82,display,展示,マーケティング,5
+83,products,商品,マーケティング,1
+84,questionnaire,アンケート,マーケティング,5
+85,survey,調査,マーケティング,5
+86,mass media,マスメディア,マーケティング,1
+87,poll,世論調査,マーケティング,5
+88,business card,名刺,マーケティング,5
+89,training,研修,マーケティング,1
+90,trainee,研修生,マーケティング,5
+91,statistic,統計,マーケティング,5
+92,profit margin,利益率,マーケティング,5
+93,newsletter,ニュースレター,マーケティング,1
+94,competition,競争,マーケティング,5
+95,merchandise,商品,マーケティング,5
+96,manufacture,製造,マーケティング,5
+97,recruitment,採用,マーケティング,5
+99,course outline,コースの概要,大学での勉強,5
+100,group discussion,グループディスカッション,大学での勉強,1
+101,handout,配布資料,大学での勉強,5
+102,research,研究,大学での勉強,1
+103,Proofreading,校正,大学での勉強,5
+104,experiment,実験,大学での勉強,5
+105,written work,作文,大学での勉強,1
+106,report writing,レポート作成,大学での勉強,1
+107,experience,体験,大学での勉強,1
+108,reference,参照,大学での勉強,5
+109,textbook,教科書,大学での勉強,1
+110,student advisor,学生アドバイザー,大学での勉強,1
+111,teamwork,チームワーク,大学での勉強,1
+112,module,モジュール,大学での勉強,5
+113,topic,トピック,大学での勉強,5
+114,dictionary,辞書,大学での勉強,1
+115,laptop,ラップトップ,大学での勉強,5
+116,printer,プリンター,大学での勉強,1
+117,assessment,評価,大学での勉強,5
+118,library,図書館,大学での勉強,5
+119,department,学部,大学での勉強,5
+120,computer center,コンピューターセンター,大学での勉強,1
+121,classroom,教室,大学での勉強,1
+122,attendance,出席,大学での勉強,5
+123,deadline,締め切り,大学での勉強,5
+124,give a talk,講演,大学での勉強,5
+125,speech,スピーチ,大学での勉強,1
+126,lecture,講義,大学での勉強,5
+127,tutor,チューター,大学での勉強,5
+128,main hall,メインホール,大学での勉強,1
+129,computer laboratory,コンピュータラボ,大学での勉強,5
+130,certificate,証明書,大学での勉強,5
+131,diploma,卒業証書,大学での勉強,5
+132,placement test,プレイスメントテスト,大学での勉強,5
+133,facilities,施設,大学での勉強,5
+134,college,カレッジ,大学での勉強,5
+135,dining room,ダイニングルーム,大学での勉強,1
+136,specialist,スペシャリスト,大学での勉強,1
+137,knowledge,知識,大学での勉強,1
+138,international,国際,大学での勉強,1
+139,accommodation,宿泊施設,大学での勉強,5
+140,overseas students,留学生,大学での勉強,5
+141,full-time,フルタイム,大学での勉強,1
+142,homestay,ホームステイ,大学での勉強,1
+143,primary,プライマリー,大学での勉強,1
+144,secondary,セカンダリー,大学での勉強,1
+145,intermediate,中級,大学での勉強,5
+146,media room,メディアルーム,大学での勉強,1
+147,commencement,開始,大学での勉強,5
+148,dissertation,論文,大学での勉強,10
+149,leaflet,リーフレット,大学での勉強,5
+150,school reunion,同窓会,大学での勉強,5
+151,feedback,フィードバック,大学での勉強,5
+152,tasks,タスク,大学での勉強,5
+153,outcomes,成果,大学での勉強,5
+154,advanced,上級,大学での勉強,5
+155,introductory,入門,大学での勉強,5
+156,extra background,追加の背景,大学での勉強,5
+157,resources room,リソースルーム,大学での勉強,5
+158,staff,スタッフ,大学での勉強,1
+159,higher education,高等教育,大学での勉強,1
+160,guidelines,ガイドライン,大学での勉強,1
+161,post-secondary,中等後,大学での勉強,5
+162,faculty,教員,大学での勉強,5
+163,pupils,生徒,大学での勉強,5
+164,pencil,鉛筆,大学での勉強,1
+165,supervisor,スーパーバイザー,大学での勉強,5
+166,bachelor’s degree,学士号,大学での勉強,5
+167,compound,コンパウンド,大学での勉強,5
+168,foreign students,留学生,大学での勉強,5
+169,schedule,スケジュール,大学での勉強,1
+170,vocabulary,語彙,大学での勉強,1
+171,student support services,学生支援サービス,大学での勉強,1
+172,student retention,学生の保持,大学での勉強,5
+173,publication,出版物,大学での勉強,5
+174,registrar’s office,登録事務所,大学での勉強,5
+175,stationery,文房具,大学での勉強,5
+177,designer,デザイナー,仕事/職業,1
+178,occupation,職業,仕事/職業,5
+179,profession,職業,仕事/職業,5
+180,decorator,装飾家,仕事/職業,5
+181,architect,建築家,仕事/職業,5
+182,engineer,エンジニア,仕事/職業,1
+183,waiter,ウェイター,仕事/職業,1
+184,teacher,教師,仕事/職業,1
+185,vacancy,欠員,仕事/職業,5
+186,professor,教授,仕事/職業,5
+187,manager,マネージャー,仕事/職業,1
+188,waitress,ウェイトレス,仕事/職業,1
+189,psychologist,心理学者,仕事/職業,5
+190,volunteer,ボランティア,仕事/職業,1
+191,craftsman,職人,仕事/職業,5
+192,work experience,実務経験,仕事/職業,5
+193,curriculum vitae,履歴書,仕事/職業,5
+194,freelance,フリーランス,仕事/職業,5
+195,secretary,秘書,仕事/職業,5
+196,mail address,メールアドレス,仕事/職業,1
+197,receptionist,受付係,仕事/職業,5
+198,pilot,パイロット,仕事/職業,1
+199,lecturer,講師,仕事/職業,1
+200,office assistant,オフィスアシスタント,仕事/職業,5
+201,clerk,事務員,仕事/職業,5
+202,accountant,会計士,仕事/職業,5
+203,guard,ガードマン,仕事/職業,1
+204,flight attendant,客室乗務員,仕事/職業,1
+205,cashier,キャッシャー,仕事/職業,5
+206,captain,キャプテン,仕事/職業,1
+207,yoga,ヨガ,仕事/職業,1
+209,tai-chi,太極拳,健康,10
+210,keep-fit,健康維持,健康,5
+211,salad bar,サラダバー,健康,1
+212,vegetarian,ベジタリアン,健康,5
+213,outdoor activities,野外活動,健康,1
+214,leisure time,余暇,健康,10
+215,disease,病気,健康,5
+216,meal,食事,健康,5
+217,protein,タンパク質,健康,5
+218,balanced diet,バランスの取れた食事,健康,5
+219,food pyramid,食品ピラミッド,健康,1
+220,vitamin,ビタミン,健康,5
+221,carbohydrates,炭水化物,健康,5
+222,rice,米,健康,1
+223,pasta,パスタ,健康,1
+224,potatoes,ジャガイモ,健康,1
+225,pizza,ピザ,健康,1
+226,tomatoes,トマト,健康,1
+227,bread,パン,健康,1
+228,cereals,穀物,健康,5
+229,minerals,ミネラル,健康,5
+230,zinc,亜鉛,健康,10
+231,meat,肉,健康,1
+232,seafood,魚介類,健康,1
+233,eggs,卵,健康,1
+234,beans,豆,健康,1
+235,milk,牛乳,健康,1
+236,cheese,チーズ,健康,1
+237,yogurt,ヨーグルト,健康,5
+238,fruit,果物,健康,1
+239,vegetables,野菜,健康,1
+240,citrus fruits,柑橘類,健康,5
+241,green pepper,ピーマン,健康,5
+242,blackcurrant,カシス,健康,10
+243,nuts,ナッツ,健康,1
+244,egg yolk,卵黄,健康,5
+245,liver,肝臓,健康,5
+246,medicine، treatment,薬・治療,健康,5
+247,remedy,治療,健康,5
+248,nursing care,介護,健康,5
+249,nursery,保育園,健康,5
+250,regular exercise,定期的な運動,健康,5
+252,field,フィールド,自然,5
+253,footbridge,歩道橋,自然,5
+254,river,川,自然,1
+255,mountain,山,自然,1
+256,forest,森,自然,1
+257,village,村,自然,1
+258,environment,環境,自然,1
+259,waterfall,滝,自然,5
+260,coast,海岸,自然,5
+261,reef,岩礁,自然,5
+262,lake,湖,自然,5
+263,valley,谷,自然,5
+264,peninsula,半島,自然,5
+265,earthquake,地震,自然,5
+266,avalanche,雪崩,自然,10
+267,tornado,竜巻,自然,5
+268,typhoon,台風,自然,1
+269,hill,丘,自然,1
+270,cliff,崖,自然,1
+271,island,島,自然,5
+272,desertification,砂漠化,自然,5
+273,volcano,火山,自然,5
+274,disaster,災害,自然,5
+275,landslides,地滑り,自然,5
+276,storm,嵐,自然,1
+277,flood,洪水,自然,5
+278,hurricane,ハリケーン,自然,5
+279,pond,池,自然,5
+280,catastrophe,大災害,自然,5
+281,erosion,侵食,自然,10
+282,jungle,ジャングル,自然,5
+283,oasis,オアシス,自然,5
+284,dam,ダム,自然,5
+285,canyon,キャニオン,自然,5
+287,coal,石炭,環境,5
+288,fossil fuels,化石燃料,環境,5
+289,acid rain,酸性雨,環境,5
+290,global warming,地球温暖化,環境,5
+291,carbon dioxide,二酸化炭素,環境,5
+292,greenhouse effect,温室効果,環境,5
+293,burning fossil,化石の燃焼,環境,5
+294,exhaust fumes,排気ガス,環境,5
+295,smog,スモッグ,環境,5
+296,climate,気候,環境,5
+297,pollution,汚染,環境,5
+298,temperature,温度,環境,5
+299,power plants,発電所,環境,5
+300,deforestation,森林伐採,環境,10
