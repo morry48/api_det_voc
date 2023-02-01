@@ -3,6 +3,7 @@
 ### docker set up
 
 ```
+$ cp go/src/.env.expample go/src/.env
 $ docker compose up -d
 ```
 
