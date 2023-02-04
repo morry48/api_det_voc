@@ -18,10 +18,9 @@ func Init() {
 	if err != nil {
 		fmt.Printf("環境変数が読み込み出来ませんでした: %v", err)
 	}
-	os.Getenv("DB_HOST")
-
 	db, err = gorm.Open("postgres", "host="+os.Getenv("DB_HOST")+" port="+os.Getenv("DB_PORT")+" user="+os.Getenv("DB_USERNAME")+" dbname="+os.Getenv("DB_DATABASE")+" password="+os.Getenv("DB_PASSWORD")+" sslmode=disable")
 	if err != nil {
+		fmt.Printf("DB接続出来ませんでした: %v", err)
 		panic(err)
 	}
 	autoMigration()
