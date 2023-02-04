@@ -10,10 +10,10 @@ type Usecase struct{}
 type Vocabulary entity.Vocabulary
 
 func (s Usecase) GetAll() ([]Vocabulary, error) {
-	db := db.GetDB()
+	detDb := db.GetDB()
 	var u []Vocabulary
 
-	if err := db.Limit(30).Find(&u).Error; err != nil {
+	if err := detDb.Order("RANDOM()").Limit(30).Find(&u).Error; err != nil {
 		return nil, err
 	}
 
