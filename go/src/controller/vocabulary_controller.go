@@ -12,7 +12,7 @@ func (pc Controller) Index(c *gin.Context) {
 	level := c.Query("level")
 	var u vocabulary.Usecase
 	input := vocabulary.ListInput{
-		Level: level,
+		Level: &level,
 	}
 	vocList, err := u.GetAll(&input)
 
