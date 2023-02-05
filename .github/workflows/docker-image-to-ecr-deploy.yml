@@ -31,6 +31,6 @@ jobs:
         ECR_REPOSITORY: ${{ secrets.AWS_ECR_REPO_NAME }}
       run: |
         cd go/src/
-        docker build -t api_det_voc .
-        docker tag api_det_voc:latest 690824620233.dkr.ecr.ap-northeast-1.amazonaws.com/api_det_voc:latest
-        docker push 690824620233.dkr.ecr.ap-northeast-1.amazonaws.com/api_det_voc:latest
+        docker build -t $ECR_REPOSITORY .
+        docker tag $ECR_REPOSITORY:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
