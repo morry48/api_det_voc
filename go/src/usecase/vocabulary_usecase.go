@@ -21,12 +21,10 @@ func (s Usecase) GetAll(input *ListInput) ([]Vocabulary, error) {
 	orm := detDb.Model(&Vocabulary{})
 
 	if *input.Level != "" {
-		orm = detDb.Model(&Vocabulary{}).Where("level = ?", input.Level).Order("RANDOM()").Limit(30)
-	} else {
-		orm = detDb.Model(&Vocabulary{}).Order("RANDOM()").Limit(30)
+		orm = orm.Where("level = ?", input.Level)
 	}
 
-	if err := orm.Find(&u).Error; err != nil {
+	if err := orm.Order("RANDOM()").Limit(30).Find(&u).Error; err != nil {
 		return nil, err
 	}
 	return u, nil
