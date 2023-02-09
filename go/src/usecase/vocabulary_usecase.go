@@ -18,18 +18,16 @@ type Vocabulary entity.Vocabulary
 func (s Usecase) GetAll(input *ListInput) ([]Vocabulary, error) {
 	detDb := db.GetDB()
 	var u []Vocabulary
-
 	orm := detDb.Model(&Vocabulary{})
 
 	if *input.Level != "" {
-		if err := orm.Where("level = ?", input.Level).Order("RANDOM()").Limit(30).Find(&u).Error; err != nil {
-			return nil, err
-		}
+		orm = detDb.Model(&Vocabulary{}).Where("level = ?", input.Level).Order("RANDOM()").Limit(30)
 	} else {
-		if err := orm.Order("RANDOM()").Limit(30).Find(&u).Error; err != nil {
-			return nil, err
-		}
+		orm = detDb.Model(&Vocabulary{}).Order("RANDOM()").Limit(30)
 	}
 
+	if err := orm.Find(&u).Error; err != nil {
+		return nil, err
+	}
 	return u, nil
 }
