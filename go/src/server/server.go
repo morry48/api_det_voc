@@ -3,7 +3,7 @@ package server
 import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	vocabulary "nothing-behind.com/sample_gin/controller"
+	"nothing-behind.com/sample_gin/packages/vocabulary/handler"
 	"time"
 )
 
@@ -45,7 +45,7 @@ func router() *gin.Engine {
 
 	v := r.Group("/vocabularies")
 	{
-		ctrl := vocabulary.Controller{}
+		ctrl := vocabulary.Handler{}
 		v.GET("/", ctrl.Index)
 	}
 
