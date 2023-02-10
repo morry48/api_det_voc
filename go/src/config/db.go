@@ -1,11 +1,11 @@
-package db
+package config
 
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres" // Use PostgreSQL in gorm
 	"github.com/joho/godotenv"
-	"nothing-behind.com/sample_gin/entity"
+	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/model"
 	"os"
 )
 
@@ -31,7 +31,7 @@ func GetDB() *gorm.DB {
 	return db
 }
 
-// Close is closing db
+// Close is closing postgres
 func Close() {
 	if err := db.Close(); err != nil {
 		panic(err)
@@ -39,5 +39,5 @@ func Close() {
 }
 
 func autoMigration() {
-	db.AutoMigrate(&entity.Vocabulary{})
+	db.AutoMigrate(&model.Vocabulary{})
 }

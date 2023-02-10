@@ -7,3 +7,7 @@ type Vocabulary struct {
 	Category string `json:"category"`
 	Level    string `json:"level"`
 }
+
+type QueryOption struct {
+	Level *string
+}
