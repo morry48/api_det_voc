@@ -49,8 +49,8 @@ http://localhost:3000/vocabularies/
           - /postgres(ポスグレ関連)
             - /model(DBモデル・データベースのテーブルを1対1で表現・grom用)
             - /repository(データ永続化の貯蔵庫)
-    - server(サーバーを起動するための設定・ルーティング)
-    - tmp(フレームワークのファイル)
+    - /server(サーバーを起動するための設定・ルーティング)
+    - /tmp(フレームワークのファイル)
     - 以下ファイル(FW/ライブラリ関連)
 
 ## todo
