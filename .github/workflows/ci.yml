@@ -24,7 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '1.19'
+      - name: Build binary
+        run: |
+          cp go/src/.env.example go/src/.env
+          docker-compose up -d db
       # Runs a single command using the runners shell
       - name: go test
         run: |
