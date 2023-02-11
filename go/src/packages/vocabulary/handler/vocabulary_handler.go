@@ -1,25 +1,30 @@
-package vocabulary
+package handler
 
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"net/http"
 	"nothing-behind.com/sample_gin/packages/vocabulary/usecase"
 )
 
-type Handler struct{}
-
-func (h Handler) Index(c *gin.Context) {
-	level := c.Query("level")
-	var u vocabulary.Usecase
-	input := vocabulary.ListInput{
-		Level: &level,
+func ListVocabulariesHandler(uc usecase.ListVocabularies) gin.HandlerFunc {
+	type Request struct {
+		level string `form:"level"`
 	}
-	vocList, err := u.GetListByParams(&input)
+	return func(c *gin.Context) {
+		var err error
+		var req Request
+		// リクエストのバリデーションが必要になった場合はここでリクエストの内容をチェックする
+		input := usecase.ListInput{
+			Level: &req.level,
+		}
+		output, err := uc.Exec(&input)
 
-	if err != nil {
-		c.AbortWithStatus(404)
-		fmt.Println(err)
-	} else {
-		c.JSON(200, vocList)
+		if err != nil {
+			c.AbortWithStatus(http.StatusNotFound)
+			fmt.Println(err)
+		}
+		c.JSON(http.StatusOK, output)
 	}
+
 }
