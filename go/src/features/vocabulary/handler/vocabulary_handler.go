@@ -14,7 +14,9 @@ func ListVocabulariesHandler(uc usecase.ListVocabularies) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var err error
 		var req Request
-		// リクエストのバリデーションが必要になった場合はここでリクエストの内容をチェックする
+
+		//一個一個Query()書かなくてもいい方法があるはず...
+		req.level = c.Query("level")
 		input := usecase.ListInput{
 			Level: &req.level,
 		}
