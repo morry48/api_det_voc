@@ -7,9 +7,9 @@
 package server
 
 import (
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/repository"
-	"nothing-behind.com/sample_gin/packages/vocabulary/usecase"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/repository"
+	"nothing-behind.com/sample_gin/features/vocabulary/usecase"
 )
 
 // Injectors from wire.go:

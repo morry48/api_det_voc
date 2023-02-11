@@ -4,8 +4,8 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"log"
-	"nothing-behind.com/sample_gin/packages/vocabulary/handler"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres"
+	"nothing-behind.com/sample_gin/features/vocabulary/handler"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
 	"time"
 )
 

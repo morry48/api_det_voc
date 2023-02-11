@@ -6,8 +6,8 @@ package server
 import (
 	"github.com/google/wire"
 	"github.com/jinzhu/gorm"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/repository"
-	"nothing-behind.com/sample_gin/packages/vocabulary/usecase"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/repository"
+	"nothing-behind.com/sample_gin/features/vocabulary/usecase"
 )
 
 type App struct {

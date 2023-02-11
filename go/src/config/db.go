@@ -5,7 +5,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres" // Use PostgreSQL in gorm
 	"github.com/joho/godotenv"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/model"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/model"
 	"os"
 )
 

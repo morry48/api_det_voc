@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"nothing-behind.com/sample_gin/packages/vocabulary/usecase"
+	"nothing-behind.com/sample_gin/features/vocabulary/usecase"
 )
 
 func ListVocabulariesHandler(uc usecase.ListVocabularies) gin.HandlerFunc {

@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"nothing-behind.com/sample_gin/packages/vocabulary/domain/entity"
+	"nothing-behind.com/sample_gin/features/vocabulary/domain/entity"
 )
 
 type VocabularyRepository interface {

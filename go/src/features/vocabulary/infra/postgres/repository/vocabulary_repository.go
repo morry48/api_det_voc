@@ -2,10 +2,10 @@ package repository
 
 import (
 	"nothing-behind.com/sample_gin/config"
-	"nothing-behind.com/sample_gin/packages/vocabulary/domain/entity"
-	"nothing-behind.com/sample_gin/packages/vocabulary/domain/interface_repository"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/model"
+	"nothing-behind.com/sample_gin/features/vocabulary/domain/entity"
+	"nothing-behind.com/sample_gin/features/vocabulary/domain/interface_repository"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/model"
 )
 
 func NewVocabularyRepository(db *postgres.Database) repository.VocabularyRepository {

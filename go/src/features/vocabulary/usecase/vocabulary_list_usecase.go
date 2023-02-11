@@ -1,9 +1,9 @@
 package usecase
 
 import (
-	"nothing-behind.com/sample_gin/packages/vocabulary/domain/entity"
-	repository "nothing-behind.com/sample_gin/packages/vocabulary/domain/interface_repository"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres"
+	"nothing-behind.com/sample_gin/features/vocabulary/domain/entity"
+	repository "nothing-behind.com/sample_gin/features/vocabulary/domain/interface_repository"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
 )
 
 type ListInput struct {
