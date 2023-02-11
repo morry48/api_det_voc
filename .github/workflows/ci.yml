@@ -34,5 +34,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: go test
         run: |
-          docker compose exec app sh
-          go test ./...
+          make go_test
