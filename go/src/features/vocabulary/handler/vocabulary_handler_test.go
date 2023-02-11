@@ -50,7 +50,7 @@ func TestListVocabulariesHandler(t *testing.T) {
 				if err != nil {
 					return
 				}
-				assert.EqualValues(t, 31, len(*m.Vocabularies))
+				assert.EqualValues(t, 30, len(*m.Vocabularies))
 			},
 		},
 		{
