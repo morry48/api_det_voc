@@ -11,7 +11,11 @@ import (
 
 func Init() {
 	r := router()
-	r.Run()
+	err := r.Run()
+	if err != nil {
+		log.Fatalf("%+v", err)
+		return
+	}
 }
 
 func router() *gin.Engine {
