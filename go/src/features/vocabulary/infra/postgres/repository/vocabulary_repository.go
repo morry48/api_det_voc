@@ -1,19 +1,19 @@
 package repository
 
 import (
-	"github.com/jinzhu/gorm"
 	"nothing-behind.com/sample_gin/config"
-	"nothing-behind.com/sample_gin/packages/vocabulary/domain/entity"
-	"nothing-behind.com/sample_gin/packages/vocabulary/domain/interface_repository"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/model"
+	"nothing-behind.com/sample_gin/features/vocabulary/domain/entity"
+	"nothing-behind.com/sample_gin/features/vocabulary/domain/interface_repository"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/model"
 )
 
-func NewVocabularyRepository(db *gorm.DB) repository.VocabularyRepository {
-	return &VocabularyRepositoryImpl{db: db}
+func NewVocabularyRepository(db *postgres.Database) repository.VocabularyRepository {
+	return &VocabularyRepositoryImpl{db: *db}
 }
 
 type VocabularyRepositoryImpl struct {
-	db *gorm.DB
+	db postgres.Database
 }
 
 func (v VocabularyRepositoryImpl) SelectByOption(option *entity.QueryOption) (*[]entity.Vocabulary, error) {
