@@ -11,7 +11,7 @@ type ListInput struct {
 }
 
 type ListOutput struct {
-	Vocabularies *[]entity.Vocabulary
+	Vocabularies *[]entity.Vocabulary `json:"vocabularies"`
 }
 
 type ListVocabularies interface {
