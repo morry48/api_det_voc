@@ -7,14 +7,14 @@
 package server
 
 import (
-	"github.com/jinzhu/gorm"
+	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres"
 	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/repository"
 	"nothing-behind.com/sample_gin/packages/vocabulary/usecase"
 )
 
 // Injectors from wire.go:
 
-func InitVocabularyList(db *gorm.DB) usecase.ListVocabularies {
+func InitVocabularyList(db *postgres.Database) usecase.ListVocabularies {
 	vocabularyRepository := repository.NewVocabularyRepository(db)
 	listVocabularies := usecase.NewListCategories(db, vocabularyRepository)
 	return listVocabularies

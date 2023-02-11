@@ -1,9 +1,9 @@
 package usecase
 
 import (
-	"github.com/jinzhu/gorm"
 	"nothing-behind.com/sample_gin/packages/vocabulary/domain/entity"
 	repository "nothing-behind.com/sample_gin/packages/vocabulary/domain/interface_repository"
+	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres"
 )
 
 type ListInput struct {
@@ -19,11 +19,11 @@ type ListVocabularies interface {
 }
 
 type listVocabularies struct {
-	db                   *gorm.DB
+	db                   *postgres.Database
 	vocabularyRepository repository.VocabularyRepository
 }
 
-func NewListCategories(db *gorm.DB, vocabularyRepository repository.VocabularyRepository) ListVocabularies {
+func NewListCategories(db *postgres.Database, vocabularyRepository repository.VocabularyRepository) ListVocabularies {
 	return &listVocabularies{
 		db:                   db,
 		vocabularyRepository: vocabularyRepository,

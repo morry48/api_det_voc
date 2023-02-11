@@ -3,8 +3,9 @@ package server
 import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
+	"log"
 	"nothing-behind.com/sample_gin/packages/vocabulary/handler"
+	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres"
 	"time"
 )
 
@@ -47,7 +48,10 @@ func router() *gin.Engine {
 	v := r.Group("/vocabularies")
 	{
 		// todo 散りばめられたgromをrepository層に隠蔽する
-		var db *gorm.DB
+		db, err := postgres.New()
+		if err != nil {
+			log.Fatal("fail init database")
+		}
 		vocabularyListUsecase := InitVocabularyList(db)
 		listVocabulariesHandler := handler.ListVocabulariesHandler(vocabularyListUsecase)
 

@@ -10,6 +10,12 @@ import (
 	"nothing-behind.com/sample_gin/packages/vocabulary/usecase"
 )
 
+type App struct {
+	rdb *posgre.Database
+
+	notificationApp *notification.App
+}
+
 func InitVocabularyList(db *gorm.DB) usecase.ListVocabularies {
 	wire.Build(
 		usecase.NewListCategories,
