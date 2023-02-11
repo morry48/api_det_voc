@@ -5,7 +5,6 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres" // Use PostgreSQL in gorm
 	"github.com/joho/godotenv"
-	"log"
 	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/model"
 	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/seed"
 	"os"
@@ -58,6 +57,6 @@ func InitForTest() {
 	db.Exec("delete from vocabularies")
 	db.Exec(seed.InitSql)
 	if err != nil {
-		log.Printf("データベース初期化失敗しました: %v", err)
+		fmt.Printf("データベース初期化失敗しました: %v", err)
 	}
 }
