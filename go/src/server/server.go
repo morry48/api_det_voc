@@ -5,8 +5,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	"nothing-behind.com/sample_gin/packages/vocabulary/handler"
-	"nothing-behind.com/sample_gin/packages/vocabulary/infra/postgres/repository"
-	"nothing-behind.com/sample_gin/packages/vocabulary/usecase"
 	"time"
 )
 
@@ -50,8 +48,7 @@ func router() *gin.Engine {
 	{
 		// todo 散りばめられたgromをrepository層に隠蔽する
 		var db *gorm.DB
-		// todo 依存解決を専用のファイルに移動する(wire検討)
-		vocabularyListUsecase := usecase.NewListCategories(db, repository.NewVocabularyRepository(db))
+		vocabularyListUsecase := InitVocabularyList(db)
 		listVocabulariesHandler := handler.ListVocabulariesHandler(vocabularyListUsecase)
 
 		v.GET("/", listVocabulariesHandler)
