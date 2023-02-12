@@ -8,8 +8,7 @@ import (
 	"log"
 	"net/http"
 	"net/http/httptest"
-	"nothing-behind.com/sample_gin/config"
-	postgres2 "nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
+	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
 	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres/repository"
 	"nothing-behind.com/sample_gin/features/vocabulary/usecase"
 	"nothing-behind.com/sample_gin/utils/test_utils"
@@ -17,15 +16,17 @@ import (
 )
 
 func TestListVocabulariesHandler(t *testing.T) {
-	config.InitForTest()
-	postgres, err := postgres2.New()
-
+	db, err := postgres.InitForTest()
+	if err != nil {
+		return
+	}
+	//postgres, err := postgres2.New()
 	if err != nil {
 		log.Fatal("fail init database")
 	}
 
-	vocabularyRepository := repository.NewVocabularyRepository(postgres)
-	ListCategoriesUc := usecase.NewListCategories(postgres, vocabularyRepository)
+	vocabularyRepository := repository.NewVocabularyRepository(db)
+	ListCategoriesUc := usecase.NewListCategories(db, vocabularyRepository)
 
 	funcToTest := ListVocabulariesHandler(ListCategoriesUc)
 

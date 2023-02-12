@@ -16,6 +16,7 @@ func Init() {
 		log.Fatalf("%+v", err)
 		return
 	}
+	postgres.Close()
 }
 
 func router() *gin.Engine {
@@ -51,7 +52,6 @@ func router() *gin.Engine {
 
 	v := r.Group("/vocabularies")
 	{
-		// todo 散りばめられたgromをrepository層に隠蔽する
 		db, err := postgres.New()
 		if err != nil {
 			log.Fatal("fail init database")

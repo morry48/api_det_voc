@@ -1,7 +1,6 @@
 package repository
 
 import (
-	"nothing-behind.com/sample_gin/config"
 	"nothing-behind.com/sample_gin/features/vocabulary/domain/entity"
 	"nothing-behind.com/sample_gin/features/vocabulary/domain/interface_repository"
 	"nothing-behind.com/sample_gin/features/vocabulary/infra/postgres"
@@ -17,11 +16,8 @@ type VocabularyRepositoryImpl struct {
 }
 
 func (v VocabularyRepositoryImpl) SelectByOption(option *entity.QueryOption) (*[]entity.Vocabulary, error) {
-	// todo ここでconfig呼ぶと依存している。VocabularyRepositoryImplのmodel使う形式にする
-	detDb := config.GetDB()
-
 	var result []entity.Vocabulary
-	orm := detDb.Model(&model.Vocabulary{})
+	orm := v.db.Model(&model.Vocabulary{})
 
 	// todo category
 	if *option.Level != "" {
