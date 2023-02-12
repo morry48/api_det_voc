@@ -42,6 +42,7 @@ func RunSingleHandlerTestCase(t *testing.T, tt HandlerTestCase) {
 	// prepare
 	c, w := tt.PrepareFunc()
 
+	// testcomment
 	if c.Request.Header.Get("Content-Type") == "" {
 		c.Request.Header.Set("Content-Type", "application/json")
 	}
