@@ -18,8 +18,10 @@ PASSWORD: password
 ```
 ### init data
 
+- DBクライアントからinsert文をして単語データ投入
+
 ```
-det_voc_test_data.csv 
+go/src/features/vocabulary/infra/postgres/seed/init_data.go
 ```
 
 ### api
