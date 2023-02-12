@@ -17,7 +17,7 @@ type VocabularyRepositoryImpl struct {
 }
 
 func (v VocabularyRepositoryImpl) SelectByOption(option *entity.QueryOption) (*[]entity.Vocabulary, error) {
-
+	// todo ここでconfig呼ぶと依存している。VocabularyRepositoryImplのmodel使う形式にする
 	detDb := config.GetDB()
 
 	var result []entity.Vocabulary
