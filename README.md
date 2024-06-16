@@ -2,6 +2,8 @@
 
 This is a word memory app for the Duolingo English Test.
 
+<img width="408" alt="スクリーンショット 2024-06-16 17 57 19" src="https://github.com/morry48/api_det_voc/assets/47809847/0cc59616-a391-42d3-8636-d6d6055ff515">
+
 
 # Architecture
 
@@ -26,11 +28,21 @@ Something resembling [Clean Architecture](https://gist.github.com/mpppk/609d592f
     - /server (settings for starting the server, routing)
     - /tmp (framework files)
     - other files (FW/library related)
-
-## Todo
+   
+### Todo
 
 Implement DI in a way that allows for dependency injection via parameters.
-```
+
+
+## System Configuration
+
+- frontend
+   - https://github.com/morry48/front_det_voc
+
+If backend is changed into main branch, docker image is revised into ECR and deploy AppRunner by github action.
+If frontend is changed into main branch, source is build and deploy into S3.
+
+
 
 # Set up
 
