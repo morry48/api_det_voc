@@ -1,59 +1,65 @@
-# set up
+# What is this
 
-### docker set up
+This is a word memory app for the Duolingo English Test.
 
+
+# Architecture
+
+Something resembling [Clean Architecture](https://gist.github.com/mpppk/609d592f25cab9312654b39f1b357c60).
+
+## Directory Structure
+
+- go
+  - src
+    - /config (configuration files for the entire product)
+    - /packages (each feature)
+      - /〇〇 (feature name)
+        - /handler (absorbing differences in external connections/interfaces, controller)
+        - /usecase (unit providing service functionality)
+        - /domain (accumulation of domain rules)
+          - /entity (layer dependent on nothing)
+          - /interface_repository (repository interface for dependency inversion)
+        - /infra (hides DB and persistence layer)
+          - /postgres (related to PostgreSQL)
+            - /model (DB model, represents database tables 1:1, for GORM)
+            - /repository (data persistence storage)
+    - /server (settings for starting the server, routing)
+    - /tmp (framework files)
+    - other files (FW/library related)
+
+## Todo
+
+Implement DI in a way that allows for dependency injection via parameters.
 ```
-$ cp go/src/.env.expample go/src/.env
+
+# Set up
+
+### Docker set up
+
+```sh
+$ cp go/src/.env.example go/src/.env
 $ docker compose up -d
 ```
 
-### db client set up
+### DB client set up
 
 ```
 HOST: 127.0.0.1
 PORT: 5432
 USER: user
 PASSWORD: password
-
 ```
-### init data
 
-- DBクライアントからinsert文をして単語データ投入
+### Init data
 
-```
+- Insert word data using the insert statement from the DB client
+
+```go
 go/src/features/vocabulary/infra/postgres/seed/init_data.go
 ```
 
-### api
+### API
 
 ```
 http://localhost:3000/vocabularies/
 ```
-
-
-# アーキテクチャ
-
-[クリーンアーキテクチャ](https://gist.github.com/mpppk/609d592f25cab9312654b39f1b357c60)っぽい何か
-
-## ディレクトリ構成
-
-- go
-  - src
-    - /config(プロダクト全般の設定ファイル)
-    - /packages(各機能)
-      - /〇〇(各機能名)
-        - /handler(外部との接続・インターフェースの差を吸収/コントローラー)
-        - /usecase(サービスを提供する機能の単位)
-        - /dmain(ドメインルールの集積場)
-          - /entity(何にも依存しない層)
-          - /interface_repository(依存性逆転のためのリポジトリインターフェース)
-        - /infra(DBや永続化層を隠蔽)
-          - /postgres(ポスグレ関連)
-            - /model(DBモデル・データベースのテーブルを1対1で表現・grom用)
-            - /repository(データ永続化の貯蔵庫)
-    - /server(サーバーを起動するための設定・ルーティング)
-    - /tmp(フレームワークのファイル)
-    - 以下ファイル(FW/ライブラリ関連)
-
-## todo
-DIを引数でインジェクションする形式にしたい
